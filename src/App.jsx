@@ -89,7 +89,10 @@ function App() {
   return (
     <div className="App">
       <header className="site-header">
-        <h1 className="title-arabic">شجرة عائلة النبي محمد ﷺ</h1>
+        <a href="/">
+          {" "}
+          <h1 className="title-arabic">شجرة عائلة النبي محمد ﷺ</h1>
+        </a>
         <h2 className="title-english">Prophet Muhammad Family Tree</h2>
       </header>
 
