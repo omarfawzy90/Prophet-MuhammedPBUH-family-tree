@@ -1,0 +1,102 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  width: 80%;
+  max-width: 480px;
+  padding: 25px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  color: #030303;
+  text-align: center;
+  animation: scaleIn 0.3s ease-out;
+}
+
+.modal-icon {
+  font-size: 36px;
+  margin-bottom: 6px;
+}
+
+.modal-arabic-name {
+  font-family: "Scheherazade New", serif;
+  font-size: 26px;
+  margin: 0;
+}
+.modal-english-name {
+  font-family: "Cairo", sans-serif;
+  font-size: 14px;
+  margin-top: 4px;
+  color: #181717;
+}
+
+.modal-description {
+  margin-top: 16px;
+  text-align: left;
+}
+.label-ar,
+.text-ar {
+  font-family: "Scheherazade New", serif;
+}
+.label-en,
+.text-en {
+  font-family: "Cairo", sans-serif;
+}
+.label-ar,
+.label-en {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.close-btn {
+  margin-top: 22px;
+  padding: 8px 16px;
+  background: #9a7517; /* goldenrod */
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: background 0.3s;
+}
+
+.close-btn:hover {
+  background: #d69d0c; /* darker gold */
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .modal-content {
+    width: 92%;
+    padding: 18px;
+  }
+  .modal-arabic-name {
+    font-size: 20px;
+  }
+  .modal-icon {
+    font-size: 30px;
+  }
+}

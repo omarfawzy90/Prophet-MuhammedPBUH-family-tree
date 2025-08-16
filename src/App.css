@@ -1,0 +1,102 @@
+.App {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    to bottom right,
+    rgba(16, 27, 52, 0.9),
+    rgba(20, 29, 41, 0.9)
+  );
+}
+
+.App::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../public/bgislamic.jpg");
+  background-size: cover;
+  opacity: 0.15;
+  z-index: -1;
+  filter: blur(1.5px);
+}
+
+.site-header {
+  margin-top: 10px;
+  text-align: center;
+  color: #fff;
+}
+
+.site-header .title-arabic {
+  font-family: "Scheherazade New", serif;
+  font-size: 2.5em;
+  margin: 0;
+  color: #f5f5f5;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.site-header .title-english {
+  font-family: "Cairo", sans-serif;
+  font-size: 1.2em;
+  margin-top: 5px;
+  color: #ddd;
+}
+
+.site-footer {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  color: #bbb;
+  font-size: 14px;
+}
+
+.site-footer a {
+  color: #ffd700;
+  text-decoration: none;
+}
+
+.arrow {
+  position: absolute;
+  right: -55px;
+  font-size: 20px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  line-height: 32px;
+  text-align: center;
+  cursor: pointer;
+  backdrop-filter: blur(5px);
+}
+
+.arrow.up {
+  top: 40%;
+}
+.arrow.down {
+  top: 60%;
+}
+.arrow svg {
+  color: #fff;
+}
+.arrow:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+@media (max-width: 600px) {
+  .site-header .title-arabic {
+    font-size: 1.8em;
+  }
+
+  .site-header .title-english {
+    font-size: 0.9em;
+  }
+}
